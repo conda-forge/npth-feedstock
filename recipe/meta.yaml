@@ -14,7 +14,7 @@ source:
 build:
   number: 1001
   script:
-    - ./configure --prefix=$PREFIX LDFLAGS=" -lrt $LDFLAGS "
+    - ./configure --prefix=$PREFIX LDFLAGS=" $LDFLAGS -lrt "
     - make
     - make install
   skip: true  # [win]
