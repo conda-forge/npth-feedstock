@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1001
   script:
-    - ./configure --prefix=$PREFIX
+    - ./configure --prefix=$PREFIX LDFLAGS=" -lrt $LDFLAGS "
     - make
     - make install
   skip: true  # [win]
