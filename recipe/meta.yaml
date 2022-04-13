@@ -37,7 +37,7 @@ test:
 about:
   home: https://www.gnupg.org/software/ntbtls/index.html
   summary: The New GNU Portable Threads Library
-  license: LGPL-2
+  license: LGPL-2.0-only
   license_family: GPL
   license_file: COPYING.LIB
   description: |
@@ -51,3 +51,4 @@ about:
 extra:
   recipe-maintainers:
     - mariusvniekerk
+    - notestaff
