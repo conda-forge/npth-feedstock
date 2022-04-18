@@ -12,9 +12,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1001
   script:
-    - ./configure --prefix=$PREFIX
+    - ./configure --prefix=$PREFIX LDFLAGS=" $LDFLAGS -lrt "  # [linux]
+    - ./configure --prefix=$PREFIX  # [osx]
     - make
     - make install
   skip: true  # [win]
@@ -25,6 +26,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - make
   host:
     - libgpg-error
 
@@ -36,7 +38,7 @@ test:
 about:
   home: https://www.gnupg.org/software/ntbtls/index.html
   summary: The New GNU Portable Threads Library
-  license: LGPL-2
+  license: LGPL-2.0-only
   license_family: GPL
   license_file: COPYING.LIB
   description: |
@@ -50,3 +52,4 @@ about:
 extra:
   recipe-maintainers:
     - mariusvniekerk
+    - notestaff
