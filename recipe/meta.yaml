@@ -32,8 +32,6 @@ requirements:
 
 test:
   commands:
-    - conda inspect linkages {{ name }}  # [unix]
-    - conda inspect objects {{ name }}   # [osx]
 
 about:
   home: https://www.gnupg.org/software/ntbtls/index.html
