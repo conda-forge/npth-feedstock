@@ -51,5 +51,6 @@ about:
     based framework.
 extra:
   recipe-maintainers:
+    - zklaus
     - mariusvniekerk
     - notestaff
