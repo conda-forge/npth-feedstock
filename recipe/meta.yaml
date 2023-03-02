@@ -13,11 +13,6 @@ source:
 
 build:
   number: 1001
-  script:
-    - ./configure --prefix=$PREFIX LDFLAGS=" $LDFLAGS -lrt "  # [linux]
-    - ./configure --prefix=$PREFIX  # [osx]
-    - make
-    - make install
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('npth') }}
