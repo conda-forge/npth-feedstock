@@ -1,6 +1,6 @@
 {% set name = "npth" %}
-{% set version = "1.6" %}
-{% set sha256 = "1393abd9adcf0762d34798dc34fdcf4d0d22a8410721e76f1e3afcd1daa4e2d1" %}
+{% set version = "1.7" %}
+{% set sha256 = "8589f56937b75ce33b28d312fccbf302b3b71ec3f3945fde6aaa74027914ad05" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1002
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('npth') }}
